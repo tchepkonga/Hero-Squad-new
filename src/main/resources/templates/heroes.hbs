@@ -1,0 +1,26 @@
+{{#partial "title"}}
+    All Heroes
+{{/partial}}
+{{#partial "content"}}
+
+    {{#if heroes}}
+        {{#each heroes}}
+            <h2>Name: {{name}}</h2>
+            <div>
+                <p>Age: {{age}}</p>
+                <p>Cause: {{cause}}</p>
+                <p>Special Powers: {{specialPowers}}</p>
+                <p> Weaknesses: {{weaknesses}}</p>
+                <p>Squad is : {{squad}}</p>
+                <button type="button" class="btn btn-info"><a href="/squads"> </a>Set Squad</button>
+
+
+            </div>
+
+        {{/each}}
+    {{else}}
+        <p> No Heroes</p>
+    {{/if}}
+
+{{/partial}}
+{{>layout.hbs}}
